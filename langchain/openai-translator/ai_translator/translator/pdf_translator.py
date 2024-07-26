@@ -6,7 +6,7 @@ from utils import LOG
 
 class PDFTranslator:
     def __init__(self, model_name: str):
-        self.translate_chain = TranslationChain(model_name)
+        self.translate_chain = TranslationChain(model_name, True, api_key, base_url)
         self.pdf_parser = PDFParser()
         self.writer = Writer()
 
